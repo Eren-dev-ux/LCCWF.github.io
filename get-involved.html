@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support LCCWF through donations, volunteering, partnerships, and other engagement opportunities">
+    <title>Get Involved | Support LCCWF</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://image2url.com/r2/default/images/1770328129777-a594810d-3029-4382-98ab-864edd679702.jpg" alt="LCCWF Logo">
+                <span>LCCWF</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Who We Are</a></li>
+                <li><a href="programs.html">Our Work</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="get-involved.html" class="active">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#donate" class="btn-donate">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="involvement-header">
+        <div class="container">
+            <h1>Get Involved</h1>
+            <p>Join us in creating lasting change for children and communities</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb container">
+        <a href="index.html">Home</a> <span>/</span> <span>Get Involved</span>
+    </div>
+
+    <!-- Involvement Options -->
+    <section class="involvement-options">
+        <div class="container">
+            <h2>Ways to Make a Difference</h2>
+            <p class="section-subtitle">Choose how you'd like to contribute to our mission</p>
+            
+            <div class="options-grid">
+                <div class="option-card" data-option="donate">
+                    <div class="option-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Your financial support directly funds programs that protect children and strengthen communities.</p>
+                    <a href="#donate" class="option-link">Make a Donation <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="option-card" data-option="volunteer">
+                    <div class="option-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your time and skills to support our programs and operations.</p>
+                    <a href="#volunteer" class="option-link">Volunteer With Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="option-card" data-option="partner">
+                    <div class="option-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner</h3>
+                    <p>Collaborate with us through corporate partnerships, NGO alliances, or community groups.</p>
+                    <a href="#partner" class="option-link">Explore Partnerships <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="option-card" data-option="advocate">
+                    <div class="option-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Advocate</h3>
+                    <p>Help spread awareness about child protection and community wellness issues.</p>
+                    <a href="#advocate" class="option-link">Become an Advocate <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section-main" id="donate">
+        <div class="container">
+            <div class="donation-header">
+                <h2>Make a Donation</h2>
+                <p>Your contribution helps us reach more children and communities in need</p>
+            </div>
+            
+            <div class="donation-impact">
+                <div class="impact-statement">
+                    <h3>See Your Impact</h3>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="impact-amount">$25</div>
+                            <div class="impact-description">Provides school supplies for 1 child for a year</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$50</div>
+                            <div class="impact-description">Health kit for a family including medicines and hygiene items</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$100</div>
+                            <div class="impact-description">Supports 1 month of psychosocial counseling for 5 children</div>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$500</div>
+                            <div class="impact-description">Funds a community health awareness campaign reaching 200 people</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-form-container">
+                    <div class="donation-tabs">
+                        <button class="tab-btn active" data-tab="one-time">One-Time Donation</button>
+                        <button class="tab-btn" data-tab="monthly">Monthly Donation</button>
+                    </div>
+                    
+                    <form class="donation-form" id="donationForm">
+                        <div class="form-step active" id="step-amount">
+                            <h4>Select Donation Amount</h4>
+                            <div class="amount-options">
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="25" checked>
+                                    <span class="amount-box">$25</span>
+                                </label>
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="50">
+                                    <span class="amount-box">$50</span>
+                                </label>
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="100">
+                                    <span class="amount-box">$100</span>
+                                </label>
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="250">
+                                    <span class="amount-box">$250</span>
+                                </label>
+                                <div class="custom-amount">
+                                    <label>Other Amount ($)</label>
+                                    <input type="number" id="customAmount" min="1" placeholder="Enter amount">
+                                </div>
+                            </div>
+                            
+                            <div class="designation-section">
+                                <h5>Designate Your Donation (Optional)</h5>
+                                <select id="donationDesignation">
+                                    <option value="general">Where Most Needed</option>
+                                    <option value="child-protection">Child Protection Programs</option>
+                                    <option value="education">Education & Youth Empowerment</option>
+                                    <option value="health">Community Health & Wellness</option>
+                                    <option value="substance">Substance Use Prevention</option>
+                                    <option value="women">Women Empowerment</option>
+                                </select>
+                            </div>
+                            
+                            <button type="button" class="btn-primary next-step" data-next="step-details">Continue</button>
+                        </div>
+                        
+                        <div class="form-step" id="step-details">
+                            <h4>Your Information</h4>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" id="country">
+                                </div>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn-outline prev-step" data-prev="step-amount">Back</button>
+                                <button type="button" class="btn-primary next-step" data-next="step-payment">Continue to Payment</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="step-payment">
+                            <h4>Payment Information</h4>
+                            <div class="payment-options">
+                                <div class="payment-option active" data-method="card">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <span>Credit/Debit Card</span>
+                                </div>
+                                <div class="payment-option" data-method="paypal">
+                                    <i class="fab fa-paypal"></i>
+                                    <span>PayPal</span>
+                                </div>
+                                <div class="payment-option" data-method="bank">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer</span>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-form" id="cardForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiry Date *</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvc">CVC *</label>
+                                        <input type="text" id="cvc" placeholder="123" maxlength="4">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card *</label>
+                                    <input type="text" id="cardName">
+                                </div>
+                            </div>
+                            
+                            <div class="payment-form" id="bankForm" style="display: none;">
+                                <div class="bank-details">
+                                    <h5>Bank Transfer Details</h5>
+                                    <p><strong>Bank Name:</strong> Global Trust Bank</p>
+                                    <p><strong>Account Name:</strong> Lighthouse Children and Community Wellness Foundation</p>
+                                    <p><strong>Account Number:</strong> 1234567890</p>
+                                    <p><strong>SWIFT Code:</strong> GTBKUS33</p>
+                                    <p><strong>Routing Number:</strong> 021000021</p>
+                                    <p class="note">Please include your name as reference when making transfer</p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn-outline prev-step" data-prev="step-details">Back</button>
+                                <button type="submit" class="btn-primary" id="submitDonation">
+                                    <i class="fas fa-lock"></i> Complete Donation
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <div class="security-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure SSL Encrypted Payment • 100% Secure • Your information is protected</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="other-donation-options">
+                <h3>Other Ways to Donate</h3>
+                <div class="other-options-grid">
+                    <div class="other-option">
+                        <h4><i class="fas fa-gift"></i> In-Kind Donations</h4>
+                        <p>Donate school supplies, books, medical equipment, or other needed items.</p>
+                        <a href="contact.html" class="btn-outline">Contact About Items</a>
+                    </div>
+                    <div class="other-option">
+                        <h4><i class="fas fa-hand-holding-usd"></i> Corporate Matching</h4>
+                        <p>Double your impact through your employer's matching gift program.</p>
+                        <a href="#corporate" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="other-option">
+                        <h4><i class="fas fa-calendar-alt"></i> Fundraise for Us</h4>
+                        <p>Organize a fundraiser event or campaign in your community.</p>
+                        <a href="#fundraise" class="btn-outline">Start Fundraising</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section class="volunteer-section" id="volunteer">
+        <div class="container">
+            <div class="volunteer-header">
+                <h2>Volunteer With Us</h2>
+                <p>Join our team of dedicated volunteers making a difference on the ground</p>
+            </div>
+            
+            <div class="volunteer-opportunities">
+                <h3>Current Opportunities</h3>
+                <div class="opportunities-grid">
+                    <div class="opportunity-card">
+                        <div class="opportunity-category">Field Work</div>
+                        <h4>Community Health Educator</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Field Locations</p>
+                        <p><i class="fas fa-clock"></i> 10-15 hours/week</p>
+                        <p><i class="fas fa-calendar"></i> 6-month commitment</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Health Education</span>
+                            <span class="skill-tag">Community Engagement</span>
+                        </div>
+                        <button class="btn-outline apply-volunteer" data-role="health-educator">Learn More</button>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-category">Remote Work</div>
+                        <h4>Social Media Ambassador</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Remote</p>
+                        <p><i class="fas fa-clock"></i> 5-10 hours/week</p>
+                        <p><i class="fas fa-calendar"></i> Flexible commitment</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Content Creation</span>
+                            <span class="skill-tag">Communication</span>
+                        </div>
+                        <button class="btn-outline apply-volunteer" data-role="social-media">Learn More</button>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-category">Professional</div>
+                        <h4>Pro Bono Consultant</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Hybrid</p>
+                        <p><i class="fas fa-clock"></i> Project-based</p>
+                        <p><i class="fas fa-calendar"></i> Flexible</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Strategic Planning</span>
+                            <span class="skill-tag">Monitoring & Evaluation</span>
+                            <span class="skill-tag">Grant Writing</span>
+                        </div>
+                        <button class="btn-outline apply-volunteer" data-role="consultant">Learn More</button>
+                    </div>
+                    
+                    <div class="opportunity-card">
+                        <div class="opportunity-category">Events</div>
+                        <h4>Event Coordinator</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Regional Offices</p>
+                        <p><i class="fas fa-clock"></i> Seasonal</p>
+                        <p><i class="fas fa-calendar"></i> 3-month projects</p>
+                        <div class="opportunity-skills">
+                            <span class="skill-tag">Event Planning</span>
+                            <span class="skill-tag">Logistics</span>
+                            <span class="skill-tag">Team Coordination</span>
+                        </div>
+                        <button class="btn-outline apply-volunteer" data-role="event-coordinator">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="volunteer-benefits">
+                <h3>Why Volunteer With LCCWF?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <i class="fas fa-certificate"></i>
+                        <h4>Training & Development</h4>
+                        <p>Receive comprehensive training and skill development opportunities</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-users"></i>
+                        <h4>Community Network</h4>
+                        <p>Join a network of passionate change-makers and community leaders</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-award"></i>
+                        <h4>Recognition</h4>
+                        <p>Receive certificates, references, and recognition for your contribution</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-heart"></i>
+                        <h4>Meaningful Impact</h4>
+                        <p>Directly contribute to improving children's lives and community wellness</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="volunteer-form-container">
+                <div class="form-intro">
+                    <h3>Ready to Volunteer?</h3>
+                    <p>Fill out our volunteer application form and we'll contact you about opportunities that match your skills and interests.</p>
+                </div>
+                
+                <form class="volunteer-form" id="volunteerForm">
+                    <div class="form-section">
+                        <h4>Personal Information</h4>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="vFirstName">First Name *</label>
+                                <input type="text" id="vFirstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vLastName">Last Name *</label>
+                                <input type="text" id="vLastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vEmail">Email *</label>
+                                <input type="email" id="vEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vPhone">Phone *</label>
+                                <input type="tel" id="vPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vLocation">Location *</label>
+                                <input type="text" id="vLocation" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vAvailability">Availability *</label>
+                                <select id="vAvailability" required>
+                                    <option value="">Select availability</option>
+                                    <option value="full-time">Full-time (30+ hours/week)</option>
+                                    <option value="part-time">Part-time (10-20 hours/week)</option>
+                                    <option value="weekends">Weekends only</option>
+                                    <option value="flexible">Flexible/Project-based</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Skills & Experience</h4>
+                        <div class="skills-selection">
+                            <label>Select your areas of expertise:</label>
+                            <div class="skills-grid">
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="health">
+                                    <span>Health Education</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="education">
+                                    <span>Teaching/Tutoring</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="counseling">
+                                    <span>Counseling</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="social-media">
+                                    <span>Social Media</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="writing">
+                                    <span>Writing/Editing</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="translation">
+                                    <span>Translation</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="graphic-design">
+                                    <span>Graphic Design</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="fundraising">
+                                    <span>Fundraising</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="event-planning">
+                                    <span>Event Planning</span>
+                                </label>
+                                <label class="skill-checkbox">
+                                    <input type="checkbox" name="skills" value="research">
+                                    <span>Research</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vExperience">Briefly describe your relevant experience *</label>
+                            <textarea id="vExperience" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4>Areas of Interest</h4>
+                        <div class="interest-selection">
+                            <label>What type of volunteer work interests you? *</label>
+                            <div class="interests-grid">
+                                <label class="interest-radio">
+                                    <input type="radio" name="interest" value="field-work" required>
+                                    <span>Field/Community Work</span>
+                                </label>
+                                <label class="interest-radio">
+                                    <input type="radio" name="interest" value="remote">
+                                    <span>Remote/Online Work</span>
+                                </label>
+                                <label class="interest-radio">
+                                    <input type="radio" name="interest" value="professional">
+                                    <span>Professional/Consulting</span>
+                                </label>
+                                <label class="interest-radio">
+                                    <input type="radio" name="interest" value="events">
+                                    <span>Events & Fundraising</span>
+                                </label>
+                                <label class="interest-radio">
+                                    <input type="radio" name="interest" value="any">
+                                    <span>Any Opportunity Available</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary submit-volunteer">
+                        <i class="fas fa-paper-plane"></i> Submit Volunteer Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section class="partnership-section" id="partner">
+        <div class="container">
+            <div class="partnership-header">
+                <h2>Partnership Opportunities</h2>
+                <p>Collaborate with us to create greater impact through strategic alliances</p>
+            </div>
+            
+            <div class="partnership-types">
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Partnerships</h3>
+                    <ul>
+                        <li>Employee volunteer programs</li>
+                        <li>Cause-related marketing</li>
+                        <li>Sponsorship opportunities</li>
+                        <li>CSR initiatives</li>
+                        <li>In-kind donations</li>
+                    </ul>
+                    <a href="contact.html?type=corporate" class="btn-outline">Contact Corporate Team</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>NGO & Government</h3>
+                    <ul>
+                        <li>Program collaboration</li>
+                        <li>Joint advocacy initiatives</li>
+                        <li>Capacity building exchange</li>
+                        <li>Research partnerships</li>
+                        <li>Policy engagement</li>
+                    </ul>
+                    <a href="contact.html?type=ngo" class="btn-outline">Contact Partnerships Team</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Groups</h3>
+                    <ul>
+                        <li>Faith-based organizations</li>
+                        <li>Youth groups</li>
+                        <li>Women's associations</li>
+                        <li>Local committees</li>
+                        <li>Cultural organizations</li>
+                    </ul>
+                    <a href="contact.html?type=community" class="btn-outline">Contact Community Team</a>
+                </div>
+            </div>
+            
+            <div class="current-partners">
+                <h3>Our Current Partners</h3>
+                <div class="partners-logos">
+                    <div class="partner-logo">
+                        <img src="images/partners/unicef.png" alt="UNICEF">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partners/who.png" alt="World Health Organization">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partners/ministry-health.png" alt="Ministry of Health">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partners/global-fund.png" alt="Global Fund">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partners/local-community.png" alt="Local Community Association">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advocacy Section -->
+    <section class="advocacy-section" id="advocate">
+        <div class="container">
+            <div class="advocacy-header">
+                <h2>Become an Advocate</h2>
+                <p>Help raise awareness and advocate for child protection and community wellness</p>
+            </div>
+            
+            <div class="advocacy-actions">
+                <div class="action-card">
+                    <h3><i class="fas fa-share-alt"></i> Share Our Work</h3>
+                    <p>Follow us on social media and share our content to spread awareness.</p>
+                    <div class="social-share">
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Share
+                        </button>
+                        <button class="social-btn twitter">
+                            <i class="fab fa-twitter"></i> Tweet
+                        </button>
+                        <button class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i> Post
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3><i class="fas fa-envelope"></i> Email Campaigns</h3>
+                    <p>Join our email list to receive updates and action alerts on important issues.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+                
+                <div class="action-card">
+                    <h3><i class="fas fa-microphone"></i> Host an Event</h3>
+                    <p>Organize a talk, webinar, or community event to discuss our issues.</p>
+                    <a href="contact.html?type=event" class="btn-outline">Request Speaker</a>
+                </div>
+            </div>
+            
+            <div class="advocacy-resources">
+                <h3>Advocacy Resources</h3>
+                <div class="resources-grid">
+                    <a href="assets/docs/child-protection-toolkit.pdf" class="resource-card" download>
+                        <i class="fas fa-download"></i>
+                        <h4>Child Protection Toolkit</h4>
+                        <p>PDF Guide for advocates</p>
+                    </a>
+                    <a href="assets/docs/social-media-kit.zip" class="resource-card" download>
+                        <i class="fas fa-download"></i>
+                        <h4>Social Media Kit</h4>
+                        <p>Graphics and messaging guides</p>
+                    </a>
+                    <a href="assets/docs/advocacy-handbook.pdf" class="resource-card" download>
+                        <i class="fas fa-download"></i>
+                        <h4>Advocacy Handbook</h4>
+                        <p>How to advocate effectively</p>
+                    </a>
+                    <a href="assets/docs/fact-sheets.zip" class="resource-card" download>
+                        <i class="fas fa-download"></i>
+                        <h4>Fact Sheets</h4>
+                        <p>Statistics and key messages</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="involvement-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have Questions About Getting Involved?</h2>
+                <p>Our team is ready to help you find the best way to contribute to our mission.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                    <a href="tel:+1234567890" class="btn-secondary">
+                        <i class="fas fa-phone"></i> Call: +123 456 7890
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://image2url.com/r2/default/images/1770368519969-d2357c31-b288-43e8-a3ef-974b255054a3.png" alt="LCCWF Logo" class="footer-logo">
+                    <p>Lighthouse Children and Community Wellness Foundation</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#partner">Partner With Us</a></li>
+                        <li><a href="#advocate">Advocate</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="assets/docs/annual-report-2023.pdf">Annual Report</a></li>
+                        <li><a href="assets/docs/financials.pdf">Financial Reports</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="resources.html">Toolkits & Guides</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Involvement Team</h4>
+                    <address>
+                        <p><i class="fas fa-envelope"></i> involvement@lccwf.org</p>
+                        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Community Center, City, Country</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Lighthouse Children and Community Wellness Foundation. All rights reserved.</p>
+                <p>Registered NGO No: XYZ-1234-ABCD | All donations are tax-deductible</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="volunteerDetailModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="volunteerModalContent"></div>
+        </div>
+    </div>
+    
+    <div class="modal" id="donationSuccessModal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You for Your Donation!</h3>
+            <p>Your support will help us continue our vital work with children and communities.</p>
+            <p>A confirmation email has been sent to your inbox.</p>
+            <button class="btn-primary close-success">Continue</button>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="main.js"></script>
+    <script src="involvement.js"></script>
+</body>
+</html>
