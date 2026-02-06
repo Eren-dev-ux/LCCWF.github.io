@@ -1,0 +1,31 @@
+:root {
+    /* Colors - Inspired by lighthouse/beacon theme */
+    --primary-blue: #1a5f7a;
+    --secondary-blue: #2a8cb8;
+    --accent-yellow: #ffd166;
+    --accent-orange: #ff9a3c;
+    --light-blue: #57ccff;
+    --dark-blue: #0a2e45;
+    
+    /* Neutrals */
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #6c757d;
+    --dark-gray: #343a40;
+    
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+}
