@@ -3137,4 +3137,9 @@ p {
 .toast-content i {
     font-size: 1.5rem;
 }
+main {
+    margin-top: 70px;
+    position: relative;
+    z-index: 1;
+}
 
