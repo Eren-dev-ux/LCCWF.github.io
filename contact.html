@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Lighthouse Children and Community Wellness Foundation for inquiries, partnerships, or support">
+    <meta name="description" content="Contact Lighthouse Children and Community Wellness Foundation">
     <title>Contact Us | LCCWF</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Leaflet CSS for Map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- Navigation -->
@@ -52,367 +50,126 @@
         <a href="index.html">Home</a> <span>/</span> <span>Contact Us</span>
     </div>
 
-    <!-- Contact Options -->
-    <section class="contact-options">
-        <div class="container">
-            <h2>How Can We Help You?</h2>
-            <p class="section-subtitle">Choose the most relevant contact option for your inquiry</p>
-            
-            <div class="contact-cards">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3>General Inquiries</h3>
-                    <p>For general questions about our organization, programs, or activities.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> info@lccwf.org</p>
-                        <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                    </div>
-                    <a href="#general-form" class="btn-outline">Send Message</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Partnerships</h3>
-                    <p>For corporate partnerships, NGO collaborations, or community alliances.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> partnerships@lccwf.org</p>
-                        <p><i class="fas fa-phone"></i> +123 456 7891</p>
-                    </div>
-                    <a href="#partnership-form" class="btn-outline">Discuss Partnership</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Volunteering</h3>
-                    <p>For volunteer opportunities, internships, or field work inquiries.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> volunteer@lccwf.org</p>
-                        <p><i class="fas fa-phone"></i> +123 456 7892</p>
-                    </div>
-                    <a href="#volunteer-form" class="btn-outline">Volunteer Inquiry</a>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Media & Press</h3>
-                    <p>For media inquiries, interview requests, or press releases.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> media@lccwf.org</p>
-                        <p><i class="fas fa-phone"></i> +123 456 7893</p>
-                    </div>
-                    <a href="#media-form" class="btn-outline">Media Inquiry</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="form-header">
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you as soon as possible</p>
-            </div>
-            
-            <div class="form-tabs">
-                <button class="form-tab active" data-form="general">General Inquiry</button>
-                <button class="form-tab" data-form="partnership">Partnership</button>
-                <button class="form-tab" data-form="volunteer">Volunteer</button>
-                <button class="form-tab" data-form="media">Media</button>
-                <button class="form-tab" data-form="other">Other</button>
-            </div>
-            
-            <form class="contact-form active" id="general-form" data-form="general">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="organization">Organization</label>
-                        <input type="text" id="organization" name="organization">
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter" checked>
-                        <span>Subscribe to our newsletter for updates and impact stories</span>
-                    </label>
-                </div>
-                
-                <button type="submit" class="btn-primary submit-form">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-            
-            <form class="contact-form" id="partnership-form" data-form="partnership">
-                <!-- Partnership specific form will be shown here -->
-                <div class="form-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading partnership form...
-                </div>
-            </form>
-            
-            <form class="contact-form" id="volunteer-form" data-form="volunteer">
-                <!-- Volunteer specific form -->
-                <div class="form-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading volunteer form...
-                </div>
-            </form>
-            
-            <form class="contact-form" id="media-form" data-form="media">
-                <!-- Media specific form -->
-                <div class="form-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading media form...
-                </div>
-            </form>
-            
-            <form class="contact-form" id="other-form" data-form="other">
-                <!-- Other inquiry form -->
-                <div class="form-loading">
-                    <i class="fas fa-spinner fa-spin"></i> Loading form...
-                </div>
-            </form>
-            
-            <div class="form-footer">
-                <p><i class="fas fa-clock"></i> Response Time: We typically respond within 24-48 hours</p>
-                <p><i class="fas fa-lock"></i> Your information is secure and will not be shared with third parties</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Information -->
-    <section class="contact-info-section">
+    <section class="simple-contact-info">
         <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Headquarters</h3>
-                    <address>
-                        <p>Lighthouse Children and Community Wellness Foundation</p>
-                        <p>123 Community Center Road</p>
-                        <p>City, State 12345</p>
-                        <p>Country</p>
-                    </address>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-icon">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Phone Numbers</h3>
-                    <div class="phone-numbers">
-                        <p><strong>General Inquiries:</strong> +123 456 7890</p>
-                        <p><strong>Partnerships:</strong> +123 456 7891</p>
-                        <p><strong>Volunteering:</strong> +123 456 7892</p>
-                        <p><strong>Media:</strong> +123 456 7893</p>
-                        <p><strong>Emergency:</strong> +123 456 7899</p>
+                    <div class="method-content">
+                        <h3>Call Us</h3>
+                        <p>0912 724 9208</p>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
                     </div>
                 </div>
                 
-                <div class="info-card">
-                    <div class="info-icon">
+                <div class="contact-method">
+                    <div class="method-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h3>Email Addresses</h3>
-                    <div class="email-addresses">
-                        <p><strong>General:</strong> info@lccwf.org</p>
-                        <p><strong>Partnerships:</strong> partnerships@lccwf.org</p>
-                        <p><strong>Volunteering:</strong> volunteer@lccwf.org</p>
-                        <p><strong>Media:</strong> media@lccwf.org</p>
-                        <p><strong>Donations:</strong> donate@lccwf.org</p>
+                    <div class="method-content">
+                        <h3>Email Us</h3>
+                        <p>lighthouse.foundation26@gmail.com</p>
+                        <p>We respond within 24-48 hours</p>
                     </div>
                 </div>
                 
-                <div class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-clock"></i>
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Office Hours</h3>
-                    <div class="office-hours">
-                        <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
-                        <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM</p>
-                        <p><strong>Sunday:</strong> Closed</p>
-                        <p><strong>Holidays:</strong> Closed on public holidays</p>
+                    <div class="method-content">
+                        <h3>Visit Us</h3>
+                        <p>Lighthouse Children and Community Wellness Foundation</p>
+                        <p>Community Center, City, Country</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
+    <!-- Contact Form -->
+    <section class="simple-contact-form">
         <div class="container">
-            <h2>Find Our Offices</h2>
-            <p class="section-subtitle">Visit our headquarters or regional offices</p>
-            
-            <div class="map-container">
-                <div id="map" style="height: 400px; border-radius: 10px;"></div>
-                <div class="map-legend">
-                    <h4>Our Locations</h4>
-                    <div class="legend-items">
-                        <div class="legend-item">
-                            <span class="legend-marker hq"></span>
-                            <span>Headquarters</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-marker regional"></span>
-                            <span>Regional Office</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-marker field"></span>
-                            <span>Field Office</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="locations-list">
-                <div class="location-card">
-                    <h3><i class="fas fa-building"></i> Headquarters</h3>
-                    <p>123 Community Center Road, City, Country</p>
-                    <p><strong>Phone:</strong> +123 456 7890</p>
-                    <p><strong>Email:</strong> info@lccwf.org</p>
-                    <button class="btn-outline view-directions" data-location="hq">Get Directions</button>
-                </div>
+            <div class="form-wrapper">
+                <h2>Send Us a Message</h2>
+                <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
                 
-                <div class="location-card">
-                    <h3><i class="fas fa-map-pin"></i> Eastern Region Office</h3>
-                    <p>456 Eastern Avenue, Eastern City, Country</p>
-                    <p><strong>Phone:</strong> +123 456 7894</p>
-                    <p><strong>Email:</strong> eastern@lccwf.org</p>
-                    <button class="btn-outline view-directions" data-location="eastern">Get Directions</button>
-                </div>
-                
-                <div class="location-card">
-                    <h3><i class="fas fa-map-pin"></i> Western Region Office</h3>
-                    <p>789 Western Street, Western City, Country</p>
-                    <p><strong>Phone:</strong> +123 456 7895</p>
-                    <p><strong>Email:</strong> western@lccwf.org</p>
-                    <button class="btn-outline view-directions" data-location="western">Get Directions</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Regional Contacts -->
-    <section class="regional-contacts">
-        <div class="container">
-            <h2>Regional Contacts</h2>
-            <p class="section-subtitle">Connect with our regional teams for local inquiries</p>
-            
-            <div class="region-grid">
-                <div class="region-card">
-                    <div class="region-header">
-                        <h3>Central Region</h3>
-                        <span class="region-tag">Headquarters</span>
+                <form id="contactForm" action="https://formsubmit.co/lighthouse.foundation26@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - LCCWF Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
                     </div>
-                    <div class="region-contacts">
-                        <p><i class="fas fa-user"></i> <strong>Regional Director:</strong> Sarah Johnson</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7890</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> central@lccwf.org</p>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                     </div>
-                    <div class="region-programs">
-                        <h4>Programs in this region:</h4>
-                        <div class="program-tags">
-                            <span class="program-tag">Child Protection</span>
-                            <span class="program-tag">Health Education</span>
-                            <span class="program-tag">Youth Empowerment</span>
-                        </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0912 345 6789">
                     </div>
-                </div>
-                
-                <div class="region-card">
-                    <div class="region-header">
-                        <h3>Eastern Region</h3>
-                        <span class="region-tag">Est. 2020</span>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Partnership Opportunity">Partnership Opportunity</option>
+                            <option value="Volunteer Inquiry">Volunteer Inquiry</option>
+                            <option value="Donation Question">Donation Question</option>
+                            <option value="Media/Press">Media/Press Inquiry</option>
+                            <option value="Program Information">Program Information</option>
+                            <option value="Child Protection Concern">Child Protection Concern</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
-                    <div class="region-contacts">
-                        <p><i class="fas fa-user"></i> <strong>Regional Director:</strong> Michael Chen</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7894</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> eastern@lccwf.org</p>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please type your message here..."></textarea>
                     </div>
-                    <div class="region-programs">
-                        <h4>Programs in this region:</h4>
-                        <div class="program-tags">
-                            <span class="program-tag">Substance Prevention</span>
-                            <span class="program-tag">Community Health</span>
-                            <span class="program-tag">Women Empowerment</span>
-                        </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" checked>
+                            <span>Subscribe to our newsletter for updates and impact stories</span>
+                        </label>
                     </div>
-                </div>
-                
-                <div class="region-card">
-                    <div class="region-header">
-                        <h3>Western Region</h3>
-                        <span class="region-tag">Est. 2021</span>
-                    </div>
-                    <div class="region-contacts">
-                        <p><i class="fas fa-user"></i> <strong>Regional Director:</strong> Amina Bello</p>
-                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7895</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> western@lccwf.org</p>
-                    </div>
-                    <div class="region-programs">
-                        <h4>Programs in this region:</h4>
-                        <div class="program-tags">
-                            <span class="program-tag">Education Support</span>
-                            <span class="program-tag">Mental Health</span>
-                            <span class="program-tag">Livelihood Training</span>
-                        </div>
-                    </div>
-                </div>
+                    
+                    <button type="submit" class="btn-primary submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    
+                    <p class="form-note">
+                        <i class="fas fa-lock"></i> Your information is secure and will not be shared with third parties
+                    </p>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Emergency Contact -->
-    <section class="emergency-contact">
+    <section class="simple-emergency">
         <div class="container">
-            <div class="emergency-card">
-                <div class="emergency-icon">
+            <div class="emergency-alert">
+                <div class="alert-icon">
                     <i class="fas fa-exclamation-triangle"></i>
                 </div>
-                <div class="emergency-content">
+                <div class="alert-content">
                     <h3>Emergency Contact</h3>
                     <p>For urgent child protection cases or emergency situations requiring immediate attention</p>
-                    <div class="emergency-info">
-                        <p><i class="fas fa-phone"></i> <strong>Emergency Hotline:</strong> +123 456 7899</p>
-                        <p><i class="fas fa-clock"></i> <strong>Available:</strong> 24/7</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> emergency@lccwf.org</p>
-                    </div>
-                    <a href="tel:+1234567899" class="btn-emergency">
-                        <i class="fas fa-phone"></i> Call Emergency Line
+                    <a href="tel:09127249208" class="btn-emergency">
+                        <i class="fas fa-phone"></i> Call Emergency Line: 0912 724 9208
                     </a>
                 </div>
             </div>
@@ -420,75 +177,30 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="contact-faq">
+    <section class="simple-faq">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
-            <p class="section-subtitle">Quick answers to common questions</p>
             
-            <div class="faq-grid">
+            <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question">
-                        How quickly will I receive a response to my inquiry?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We typically respond to inquiries within 24-48 hours during business days. For urgent matters, please call our emergency hotline.</p>
-                    </div>
+                    <h3>How quickly will you respond to my message?</h3>
+                    <p>We typically respond within 24-48 hours during business days (Monday-Friday).</p>
                 </div>
                 
                 <div class="faq-item">
-                    <button class="faq-question">
-                        What information should I include in my partnership inquiry?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Please include your organization's name, contact information, type of partnership you're interested in, and any specific projects or areas of collaboration.</p>
-                    </div>
+                    <h3>What information should I include in my message?</h3>
+                    <p>Please include your name, contact information, and specific details about your inquiry so we can help you better.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <button class="faq-question">
-                        How can I visit your offices?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>All visits are by appointment only. Please contact the relevant department in advance to schedule a visit. Bring a valid ID for security purposes.</p>
-                    </div>
+                    <h3>Do you accept walk-in visitors?</h3>
+                    <p>All visits are by appointment only. Please contact us in advance to schedule a visit.</p>
                 </div>
                 
                 <div class="faq-item">
-                    <button class="faq-question">
-                        Do you accept in-kind donations?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we accept in-kind donations such as educational materials, medical supplies, and equipment. Please contact our donations team to discuss what items we currently need.</p>
-                    </div>
+                    <h3>How can I report a child protection concern?</h3>
+                    <p>Please call our emergency number immediately at 0912 724 9208. All reports are confidential.</p>
                 </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How can I report a child protection concern?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Please call our emergency hotline immediately at +123 456 7899 or email emergency@lccwf.org. All reports are confidential and handled with utmost urgency.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Can I volunteer remotely?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, we have remote volunteer opportunities in areas like social media, research, translation, and virtual tutoring. Check our volunteer page for current opportunities.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-cta">
-                <p>Didn't find your answer? <a href="#general-form">Send us a message</a> or call us at +123 456 7890</p>
             </div>
         </div>
     </section>
@@ -505,61 +217,44 @@
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Contact</h4>
+                    <h4>Contact Information</h4>
                     <address>
-                        <p><i class="fas fa-phone"></i> +123 456 7890</p>
-                        <p><i class="fas fa-envelope"></i> info@lccwf.org</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Community Center Road</p>
+                        <p><i class="fas fa-phone"></i> 0912 724 9208</p>
+                        <p><i class="fas fa-envelope"></i> lighthouse.foundation26@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Community Center, City, Country</p>
                         <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
                     </address>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="transparency.html">Transparency Report</a></li>
-                        <li><a href="sitemap.html">Site Map</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
                     </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Subscribe to our newsletter for updates</p>
-                    <form class="footer-newsletter">
-                        <input type="email" placeholder="Your email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Lighthouse Children and Community Wellness Foundation. All rights reserved.</p>
-                <p>Registered NGO No: XYZ-1234-ABCD | Registered Charity No: 12345</p>
+                <p>Registered NGO No: XYZ-1234-ABCD</p>
             </div>
         </div>
     </footer>
 
-    <!-- Success Modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-content success-modal">
-            <div class="success-icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h3>Message Sent Successfully!</h3>
-            <p>Thank you for contacting us. We have received your message and will respond within 24-48 hours.</p>
-            <p>A confirmation email has been sent to your inbox.</p>
-            <button class="btn-primary close-success">Continue</button>
+    <!-- Success Message -->
+    <div class="toast" id="successToast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span>Message sent successfully! We'll contact you soon.</span>
         </div>
     </div>
 
-    <!-- Leaflet JS for Map -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/simple-contact.js"></script>
 </body>
 </html>
