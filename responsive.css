@@ -1661,3 +1661,142 @@
         color: var(--medium-gray);
     }
 }
+/* ===== SIMPLE CONTACT PAGE RESPONSIVE ===== */
+
+/* Tablet (768px - 992px) */
+@media (max-width: 992px) {
+    .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .emergency-alert {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-lg);
+    }
+    
+    .alert-icon {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile (576px - 768px) */
+@media (max-width: 768px) {
+    /* Contact Methods */
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .contact-method {
+        flex-direction: row;
+        text-align: left;
+        padding: var(--space-md);
+    }
+    
+    .method-icon {
+        font-size: 1.8rem;
+    }
+    
+    /* Contact Form */
+    .simple-contact-form {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    .form-wrapper {
+        padding: 0 var(--space-sm);
+    }
+    
+    /* Form Elements */
+    .form-wrapper input,
+    .form-wrapper select,
+    .form-wrapper textarea {
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: 12px;
+    }
+    
+    .submit-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+    
+    /* Emergency Section */
+    .simple-emergency {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    /* FAQ Section */
+    .simple-faq {
+        padding: var(--space-lg) var(--space-sm);
+    }
+    
+    .faq-container {
+        padding: 0 var(--space-sm);
+    }
+    
+    /* Toast */
+    .toast {
+        bottom: 70px; /* Above mobile browser controls */
+        left: 10px;
+        right: 10px;
+        text-align: center;
+    }
+}
+
+/* Small Mobile (under 576px) */
+@media (max-width: 576px) {
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .method-icon {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .emergency-alert {
+        padding: var(--space-md);
+    }
+    
+    .btn-emergency {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .faq-item {
+        padding: var(--space-md);
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .contact-method,
+    .faq-item {
+        padding: 15px;
+        margin: 5px 0;
+    }
+    
+    .submit-btn,
+    .btn-emergency {
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form-wrapper input,
+    .form-wrapper select,
+    .form-wrapper textarea {
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    /* Better touch targets */
+    .method-content p[title] {
+        padding: 10px;
+        background-color: rgba(26, 95, 122, 0.05);
+        border-radius: 5px;
+    }
+}
