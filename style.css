@@ -3137,13 +3137,3 @@ p {
 .toast-content i {
     font-size: 1.5rem;
 }
-/* Fix for the sticky navigation bar */
-.sticky {
-    z-index: 1000 !important;
-}
-
-/* Fix for the hero section text positioning */
-.text {
-    top: 20vh !important; /* Adjust this value as needed */
-}
-
