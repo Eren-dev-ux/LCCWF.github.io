@@ -25,21 +25,32 @@ function initSimpleContact() {
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
             
-            // Using FormSubmit.co for email delivery
-            // The form's action attribute points to FormSubmit.co
-            // This will automatically send the email
+            // Extract form action URL
+            const formAction = this.getAttribute('action');
+            const formMethod = this.getAttribute('method') || 'POST';
             
-            // For testing/demo: Simulate success
-            setTimeout(() => {
+            // Send data using Fetch API
+            fetch(formAction, {
+                method: formMethod,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .then(data => {
                 // Show success message
                 showSuccessToast();
                 
                 // Reset form
                 contactForm.reset();
-                
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
                 
                 // Track form submission
                 if (typeof gtag !== 'undefined') {
@@ -49,15 +60,23 @@ function initSimpleContact() {
                     });
                 }
                 
-                // In production, let the form submit normally
-                // For now, we'll just show the toast
-                console.log('Form data:', data);
-                console.log('Email would be sent to: lighthouse.foundation26@gmail.com');
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
                 
-            }, 1500);
-            
-            // Uncomment to enable actual form submission:
-            // this.submit();
+                // If fetch fails, fall back to traditional form submission
+                console.log('Falling back to traditional form submission...');
+                
+                // For traditional form submission, we need to remove the event listener
+                contactForm.removeEventListener('submit', arguments.callee);
+                contactForm.submit();
+            })
+            .finally(() => {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
     
@@ -132,9 +151,18 @@ function initSimpleContact() {
         if (successToast) {
             successToast.style.display = 'flex';
             
+            // Add auto-hide
             setTimeout(() => {
                 successToast.style.display = 'none';
             }, 5000);
+            
+            // Optional: Add close button functionality
+            const closeBtn = successToast.querySelector('.toast-close');
+            if (closeBtn) {
+                closeBtn.onclick = () => {
+                    successToast.style.display = 'none';
+                };
+            }
         }
     }
     
@@ -157,14 +185,6 @@ function initSimpleContact() {
             setTimeout(() => {
                 this.style.transform = '';
             }, 200);
-            
-            // For mobile, confirm the call
-            if (window.innerWidth <= 768) {
-                const confirmed = confirm(`Call ${phoneNumber}?`);
-                if (!confirmed) {
-                    return false;
-                }
-            }
         });
     });
     
@@ -187,6 +207,25 @@ function initSimpleContact() {
                         this.textContent = originalText;
                         this.style.color = '';
                     }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = email;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    // Show feedback
+                    const originalText = this.textContent;
+                    this.textContent = '✓ Copied!';
+                    this.style.color = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.color = '';
+                    }, 2000);
                 });
             });
         }
@@ -203,14 +242,6 @@ function initSimpleContact() {
                     'event_label': 'Emergency Button'
                 });
             }
-            
-            // Add confirmation for emergency calls
-            if (window.innerWidth <= 768) {
-                const confirmed = confirm('This is an emergency hotline. Are you sure you want to call?');
-                if (!confirmed) {
-                    e.preventDefault();
-                }
-            }
         });
     }
     
@@ -226,6 +257,22 @@ function initSimpleContact() {
                 // Show copied feedback
                 const originalHTML = this.innerHTML;
                 this.innerHTML = '<span style="color: #4CAF50;">✓ Address copied to clipboard!</span>';
+                
+                setTimeout(() => {
+                    this.innerHTML = originalHTML;
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = addressText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const originalHTML = this.innerHTML;
+                this.innerHTML = '<span style="color: #4CAF50;">✓ Copied!</span>';
                 
                 setTimeout(() => {
                     this.innerHTML = originalHTML;
@@ -250,6 +297,22 @@ function initSimpleContact() {
             this.value = value;
         });
     }
+    
+    // Add success toast close button if it doesn't exist
+    if (successToast && !successToast.querySelector('.toast-close')) {
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.className = 'toast-close';
+        closeBtn.style.cssText = `
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            margin-left: auto;
+        `;
+        successToast.appendChild(closeBtn);
+    }
 }
 
 // Initialize simple contact page
@@ -257,7 +320,7 @@ if (document.querySelector('.simple-contact-form')) {
     document.addEventListener('DOMContentLoaded', initSimpleContact);
 }
 
-// Add CSS for error messages
+// Add CSS for error messages and toast
 const errorStyles = document.createElement('style');
 errorStyles.textContent = `
     .error-message {
@@ -272,7 +335,36 @@ errorStyles.textContent = `
         to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Toast animation */
+    /* Toast styles */
+    .toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 300px;
+        max-width: 400px;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        animation: toastSlideIn 0.3s ease;
+    }
+    
+    .toast-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    @keyframes toastSlideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
     @keyframes toastSlideOut {
         from { transform: translateX(0); opacity: 1; }
         to { transform: translateX(100%); opacity: 0; }
@@ -282,15 +374,9 @@ errorStyles.textContent = `
         animation: toastSlideOut 0.3s ease;
     }
     
-    /* Copy feedback animation */
-    @keyframes copyPulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
-    
-    .copy-pulse {
-        animation: copyPulse 0.3s ease;
+    /* Loading spinner */
+    .fa-spinner {
+        margin-right: 8px;
     }
     
     /* Mobile optimizations */
@@ -324,7 +410,8 @@ errorStyles.textContent = `
         .toast {
             left: 20px;
             right: 20px;
-            bottom: 80px; /* Above mobile browser UI */
+            bottom: 80px;
+            max-width: calc(100vw - 40px);
         }
     }
 `;
