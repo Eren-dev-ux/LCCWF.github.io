@@ -109,53 +109,50 @@
                     <h3>See Your Impact</h3>
                     <div class="impact-grid">
                         <div class="impact-item">
-                            <div class="impact-amount">$25</div>
+                            <div class="impact-amount">₦1,000</div>
                             <div class="impact-description">Provides school supplies for 1 child for a year</div>
                         </div>
                         <div class="impact-item">
-                            <div class="impact-amount">$50</div>
+                            <div class="impact-amount">₦1,500</div>
                             <div class="impact-description">Health kit for a family including medicines and hygiene items</div>
                         </div>
                         <div class="impact-item">
-                            <div class="impact-amount">$100</div>
+                            <div class="impact-amount">₦2,000</div>
                             <div class="impact-description">Supports 1 month of psychosocial counseling for 5 children</div>
                         </div>
                         <div class="impact-item">
-                            <div class="impact-amount">$500</div>
+                            <div class="impact-amount">₦5,000</div>
                             <div class="impact-description">Funds a community health awareness campaign reaching 200 people</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="donation-form-container">
-                    <div class="donation-tabs">
-                        <button class="tab-btn active" data-tab="one-time">One-Time Donation</button>
-                        <button class="tab-btn" data-tab="monthly">Monthly Donation</button>
-                    </div>
-                    
+                    <!-- Simplified Donation Form - Bank Transfer Only -->
                     <form class="donation-form" id="donationForm">
+                        <!-- Step 1: Select Amount -->
                         <div class="form-step active" id="step-amount">
                             <h4>Select Donation Amount</h4>
                             <div class="amount-options">
                                 <label class="amount-option">
-                                    <input type="radio" name="amount" value="25" checked>
-                                    <span class="amount-box">$25</span>
+                                    <input type="radio" name="amount" value="1000" checked>
+                                    <span class="amount-box">₦1,000</span>
                                 </label>
                                 <label class="amount-option">
-                                    <input type="radio" name="amount" value="50">
-                                    <span class="amount-box">$50</span>
+                                    <input type="radio" name="amount" value="1500">
+                                    <span class="amount-box">₦1,500</span>
                                 </label>
                                 <label class="amount-option">
-                                    <input type="radio" name="amount" value="100">
-                                    <span class="amount-box">$100</span>
+                                    <input type="radio" name="amount" value="2000">
+                                    <span class="amount-box">₦2,000</span>
                                 </label>
                                 <label class="amount-option">
-                                    <input type="radio" name="amount" value="250">
-                                    <span class="amount-box">$250</span>
+                                    <input type="radio" name="amount" value="5000">
+                                    <span class="amount-box">₦5,000</span>
                                 </label>
                                 <div class="custom-amount">
-                                    <label>Other Amount ($)</label>
-                                    <input type="number" id="customAmount" min="1" placeholder="Enter amount">
+                                    <label>Other Amount (₦)</label>
+                                    <input type="number" id="customAmount" min="100" placeholder="Enter amount">
                                 </div>
                             </div>
                             
@@ -174,6 +171,7 @@
                             <button type="button" class="btn-primary next-step" data-next="step-details">Continue</button>
                         </div>
                         
+                        <!-- Step 2: Your Details -->
                         <div class="form-step" id="step-details">
                             <h4>Your Information</h4>
                             <div class="form-grid">
@@ -190,83 +188,75 @@
                                     <input type="email" id="email" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" required placeholder="e.g., 0912 345 6789">
                                 </div>
                                 <div class="form-group full-width">
                                     <label for="address">Address</label>
-                                    <input type="text" id="address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input type="text" id="city">
-                                </div>
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <input type="text" id="country">
+                                    <input type="text" id="address" placeholder="Your address (optional)">
                                 </div>
                             </div>
                             
                             <div class="form-navigation">
                                 <button type="button" class="btn-outline prev-step" data-prev="step-amount">Back</button>
-                                <button type="button" class="btn-primary next-step" data-next="step-payment">Continue to Payment</button>
+                                <button type="button" class="btn-primary next-step" data-next="step-bank">View Bank Details</button>
                             </div>
                         </div>
                         
-                        <div class="form-step" id="step-payment">
-                            <h4>Payment Information</h4>
-                            <div class="payment-options">
-                                <div class="payment-option active" data-method="card">
-                                    <i class="fab fa-cc-visa"></i>
-                                    <span>Credit/Debit Card</span>
-                                </div>
-                                <div class="payment-option" data-method="paypal">
-                                    <i class="fab fa-paypal"></i>
-                                    <span>PayPal</span>
-                                </div>
-                                <div class="payment-option" data-method="bank">
+                        <!-- Step 3: Bank Transfer Details - UPDATED WITH KEYSTONE BANK -->
+                        <div class="form-step" id="step-bank">
+                            <h4>Bank Transfer Details</h4>
+                            
+                            <div class="bank-transfer-card">
+                                <div class="bank-icon">
                                     <i class="fas fa-university"></i>
-                                    <span>Bank Transfer</span>
                                 </div>
-                            </div>
-                            
-                            <div class="payment-form" id="cardForm">
-                                <div class="form-group">
-                                    <label for="cardNumber">Card Number *</label>
-                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
-                                </div>
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="expiry">Expiry Date *</label>
-                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                
+                                <div class="bank-info">
+                                    <div class="info-row">
+                                        <span class="info-label">Bank Name:</span>
+                                        <span class="info-value"><strong>Keystone Bank</strong></span>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="cvc">CVC *</label>
-                                        <input type="text" id="cvc" placeholder="123" maxlength="4">
+                                    <div class="info-row">
+                                        <span class="info-label">Account Name:</span>
+                                        <span class="info-value"><strong>Lighthouse Children and Community Wellness Foundation</strong></span>
+                                    </div>
+                                    <div class="info-row highlight">
+                                        <span class="info-label">Account Number:</span>
+                                        <span class="info-value account-number"><strong>1014104922</strong></span>
+                                        <button type="button" class="copy-btn" onclick="copyAccountNumber()">
+                                            <i class="fas fa-copy"></i> Copy
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="cardName">Name on Card *</label>
-                                    <input type="text" id="cardName">
+                                
+                                <div class="payment-summary">
+                                    <h5>Donation Summary</h5>
+                                    <p><strong>Amount:</strong> <span id="summaryAmount">₦1,000</span></p>
+                                    <p><strong>Purpose:</strong> <span id="summaryPurpose">Where Most Needed</span></p>
+                                    <p><strong>Name:</strong> <span id="summaryName">-</span></p>
                                 </div>
-                            </div>
-                            
-                            <div class="payment-form" id="bankForm" style="display: none;">
-                                <div class="bank-details">
-                                    <h5>Bank Transfer Details</h5>
-                                    <p><strong>Bank Name:</strong> Global Trust Bank</p>
-                                    <p><strong>Account Name:</strong> Lighthouse Children and Community Wellness Foundation</p>
-                                    <p><strong>Account Number:</strong> 1234567890</p>
-                                    <p><strong>SWIFT Code:</strong> GTBKUS33</p>
-                                    <p><strong>Routing Number:</strong> 021000021</p>
-                                    <p class="note">Please include your name as reference when making transfer</p>
+                                
+                                <div class="transfer-instructions">
+                                    <p><i class="fas fa-info-circle"></i> After transfer, please send payment confirmation to:</p>
+                                    <p><i class="fas fa-envelope"></i> <strong>emmanuelobisesan64@gmail.com</strong></p>
+                                    <p><i class="fas fa-phone"></i> <strong>0912 724 9208</strong></p>
+                                </div>
+                                
+                                <div class="ussd-option">
+                                    <p><i class="fas fa-mobile-alt"></i> <strong>USSD Transfer:</strong> Dial <strong>*7111#</strong> (Keystone Bank)</p>
+                                    <p class="small-text">Select option to transfer, enter account number <strong>1014104922</strong> and the donation amount</p>
+                                </div>
+                                
+                                <div class="note-box">
+                                    <p><i class="fas fa-clock"></i> Transfers are processed instantly. Please use your name as reference.</p>
                                 </div>
                             </div>
                             
                             <div class="form-navigation">
                                 <button type="button" class="btn-outline prev-step" data-prev="step-details">Back</button>
                                 <button type="submit" class="btn-primary" id="submitDonation">
-                                    <i class="fas fa-lock"></i> Complete Donation
+                                    <i class="fas fa-check-circle"></i> I've Made the Transfer
                                 </button>
                             </div>
                         </div>
@@ -274,7 +264,7 @@
                     
                     <div class="security-notice">
                         <i class="fas fa-shield-alt"></i>
-                        <span>Secure SSL Encrypted Payment • 100% Secure • Your information is protected</span>
+                        <span>Your information is secure and will only be used to process your donation</span>
                     </div>
                 </div>
             </div>
@@ -585,26 +575,8 @@
                 </div>
             </div>
             
-            <div class="current-partners">
-                <h3>Our Current Partners</h3>
-                <div class="partners-logos">
-                    <div class="partner-logo">
-                        <img src="images/partners/unicef.png" alt="UNICEF">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/partners/who.png" alt="World Health Organization">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/partners/ministry-health.png" alt="Ministry of Health">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/partners/global-fund.png" alt="Global Fund">
-                    </div>
-                    <div class="partner-logo">
-                        <img src="images/partners/local-community.png" alt="Local Community Association">
-                    </div>
-                </div>
-            </div>
+            <!-- Current Partners Section Removed -->
+            
         </div>
     </section>
 
@@ -685,8 +657,8 @@
                 <p>Our team is ready to help you find the best way to contribute to our mission.</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn-primary">Contact Us</a>
-                    <a href="tel:+1234567890" class="btn-secondary">
-                        <i class="fas fa-phone"></i> Call: +123 456 7890
+                    <a href="tel:09127249208" class="btn-secondary">
+                        <i class="fas fa-phone"></i> Call: 0912 724 9208
                     </a>
                 </div>
             </div>
@@ -731,8 +703,8 @@
                 <div class="footer-col">
                     <h4>Contact Involvement Team</h4>
                     <address>
-                        <p><i class="fas fa-envelope"></i> involvement@lccwf.org</p>
-                        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> emmanuelobisesan64@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 0912 724 9208</p>
                         <p><i class="fas fa-map-marker-alt"></i> Community Center, City, Country</p>
                         <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
                     </address>
@@ -760,13 +732,110 @@
             </div>
             <h3>Thank You for Your Donation!</h3>
             <p>Your support will help us continue our vital work with children and communities.</p>
+            <p>Please send payment confirmation to <strong>emmanuelobisesan64@gmail.com</strong></p>
             <p>A confirmation email has been sent to your inbox.</p>
             <button class="btn-primary close-success">Continue</button>
         </div>
     </div>
 
+    <!-- Copy Toast Notification -->
+    <div class="toast" id="copyToast">
+        <i class="fas fa-check-circle"></i>
+        <span>Account number copied to clipboard!</span>
+    </div>
+
     <script src="navigation.js"></script>
     <script src="main.js"></script>
     <script src="involvement.js"></script>
+    
+    <!-- Simple copy function for account number -->
+    <script>
+    function copyAccountNumber() {
+        const accountNumber = document.querySelector('.account-number').textContent;
+        
+        navigator.clipboard.writeText(accountNumber).then(() => {
+            // Show toast
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'flex';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+            
+            // Change button text temporarily
+            const copyBtn = document.querySelector('.copy-btn');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+            }, 2000);
+        });
+    }
+    
+    // Update summary as user fills form
+    document.addEventListener('DOMContentLoaded', function() {
+        // Update amount in summary
+        const amountRadios = document.querySelectorAll('input[name="amount"]');
+        const customAmount = document.getElementById('customAmount');
+        const summaryAmount = document.getElementById('summaryAmount');
+        
+        function updateAmount() {
+            let amount = '₦1,000'; // Default
+            const selected = document.querySelector('input[name="amount"]:checked');
+            if (selected) {
+                amount = '₦' + parseInt(selected.value).toLocaleString();
+            } else if (customAmount && customAmount.value) {
+                amount = '₦' + parseInt(customAmount.value).toLocaleString();
+            }
+            if (summaryAmount) summaryAmount.textContent = amount;
+        }
+        
+        amountRadios.forEach(radio => {
+            radio.addEventListener('change', updateAmount);
+        });
+        
+        if (customAmount) {
+            customAmount.addEventListener('input', function() {
+                // Uncheck all radios
+                amountRadios.forEach(radio => radio.checked = false);
+                if (this.value) {
+                    updateAmount();
+                }
+            });
+        }
+        
+        // Update purpose in summary
+        const purposeSelect = document.getElementById('donationDesignation');
+        const summaryPurpose = document.getElementById('summaryPurpose');
+        
+        if (purposeSelect && summaryPurpose) {
+            purposeSelect.addEventListener('change', function() {
+                const selectedOption = this.options[this.selectedIndex];
+                summaryPurpose.textContent = selectedOption.textContent;
+            });
+        }
+        
+        // Update name in summary
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const summaryName = document.getElementById('summaryName');
+        
+        function updateName() {
+            if (summaryName) {
+                const fName = firstName ? firstName.value : '';
+                const lName = lastName ? lastName.value : '';
+                if (fName || lName) {
+                    summaryName.textContent = fName + ' ' + lName;
+                } else {
+                    summaryName.textContent = '-';
+                }
+            }
+        }
+        
+        if (firstName) firstName.addEventListener('input', updateName);
+        if (lastName) lastName.addEventListener('input', updateName);
+    });
+    </script>
 </body>
 </html>
