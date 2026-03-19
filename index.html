@@ -8,6 +8,185 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Donation Cards Styling */
+        .donation-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .donation-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .donation-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #e67e22;
+            border-radius: 2px;
+        }
+        
+        .donation-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .donation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(230, 126, 34, 0.2);
+        }
+        
+        .donation-card:before {
+            content: 'LCCWF';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: rgba(230, 126, 34, 0.3);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .donation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(230, 126, 34, 0.2);
+            border-color: #e67e22;
+        }
+        
+        .donation-card h3 {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin: 20px 0 10px;
+            font-weight: 700;
+        }
+        
+        .donation-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            min-height: 50px;
+        }
+        
+        .donation-card .donate-btn {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .donation-card .donate-btn:hover {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(230, 126, 34, 0.4);
+        }
+        
+        .donation-card .donate-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .donation-card .donate-btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        .donation-card.custom-amount {
+            background: linear-gradient(135deg, #fff, #fef9f4);
+        }
+        
+        .donation-card.custom-amount h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        
+        .donation-card.custom-amount input {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+        
+        .donation-card.custom-amount input:focus {
+            outline: none;
+            border-color: #e67e22;
+        }
+        
+        @media (max-width: 768px) {
+            .donation-options {
+                gap: 20px;
+            }
+            
+            .donation-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            
+            .donation-section h2 {
+                font-size: 2rem;
+            }
+            
+            .donation-card h3 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .donation-section {
+                padding: 40px 0;
+            }
+            
+            .donation-card {
+                padding: 25px;
+            }
+            
+            .donation-card .donate-btn {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -31,7 +210,7 @@
                 <li><a href="impact.html">Impact</a></li>
                 <li><a href="get-involved.html">Get Involved</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#donate" class="btn-donate">Donate Now</a></li>
+                <li><a href="get-involved.html#donate" class="btn-donate">Donate Now</a></li>
             </ul>
         </div>
     </nav>
@@ -43,7 +222,7 @@
             <p>Protecting vulnerable children, strengthening community wellness, and building resilient futures.</p>
             <div class="hero-buttons">
                 <a href="get-involved.html" class="btn-primary">Get Involved</a>
-                <a href="#donate" class="btn-secondary">Donate Now</a>
+                <a href="get-involved.html#donate" class="btn-secondary">Donate Now</a>
             </div>
         </div>
         <div class="hero-stats">
@@ -119,32 +298,45 @@
         </div>
     </section>
 
-    <!-- Donation Section -->
+    <!-- Donation Section - Updated to match image style with links to get-involved -->
     <section class="donation-section" id="donate">
         <div class="container">
             <h2>Support Our Mission</h2>
             <div class="donation-options">
+                <!-- ₦1500 Card - Health kit for a family -->
                 <div class="donation-card">
-                    <h3>₦1000</h3>
-                    <p>Provides school supplies for 1 child</p>
-                    <button class="donate-btn" data-amount="1000">Donate</button>
+                    <h3>₦1,500</h3>
+                    <p>Health kit for a family including medicines and hygiene items</p>
+                    <a href="get-involved.html#donate" class="donate-btn">
+                        Donate <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
+                
+                <!-- ₦2000 Card - Supports 1 month of training -->
                 <div class="donation-card">
-                    <h3>₦1500</h3>
-                    <p>Health kit for a family</p>
-                    <button class="donate-btn" data-amount="1500">Donate</button>
+                    <h3>₦2,000</h3>
+                    <p>Supports 1 month of psychosocial counseling for 5 children</p>
+                    <a href="get-involved.html#donate" class="donate-btn">
+                        Donate <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="donation-card">
-                    <h3>₦2000</h3>
-                    <p>Supports 1 month of training</p>
-                    <button class="donate-btn" data-amount="2000">Donate</button>
-                </div>
+                
+                <!-- Custom Amount Card -->
                 <div class="donation-card custom-amount">
                     <h3>Other Amount</h3>
-                    <input type="number" placeholder="Enter amount" id="customAmount">
-                    <button class="donate-btn" id="customDonate">Donate</button>
+                    <p>Choose your own amount to support our programs</p>
+                    <input type="number" placeholder="Enter amount (₦)" id="customAmount" min="100">
+                    <a href="get-involved.html#donate" class="donate-btn" id="customDonate">
+                        Donate <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+            
+            <!-- Additional note about where donations go -->
+            <p style="text-align: center; margin-top: 30px; color: #666;">
+                <i class="fas fa-heart" style="color: #e67e22;"></i> 
+                100% of your donation goes directly to supporting children and communities
+            </p>
         </div>
     </section>
 
@@ -156,10 +348,10 @@
                     <img src="https://image2url.com/r2/default/images/1770328129777-a594810d-3029-4382-98ab-864edd679702.jpg" alt="LCCWF Logo" class="footer-logo">
                     <p>Lighthouse Children and Community Wellness Foundation</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook">FB</a>
-                        <a href="#" aria-label="Twitter">TW</a>
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -168,7 +360,7 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="programs.html">Our Programs</a></li>
                         <li><a href="impact.html">Our Impact</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -183,43 +375,45 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <address>
-                        <p>Email: lighthouse.foundation26@gmail.com</p>
-                        <p>Phone: 0912 724 9208</p>
-                        <p>Address: Community Center, City, Country</p>
+                        <p><i class="fas fa-envelope"></i> lighthouse.foundation26@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> 0912 724 9208</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Community Center, City, Country</p>
                     </address>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Lighthouse Children and Community Wellness Foundation. All rights reserved.</p>
-                <p>Registered NGO No: XYZ-1234-ABCD</p>
+                <p>Registered NGO No: XYZ-1234-ABCD | All donations are tax-deductible</p>
             </div>
         </div>
     </footer>
 
-    <!-- Donation Modal -->
-    <div class="modal" id="donationModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Make a Donation</h2>
-            <form id="donationForm">
-                <div class="form-group">
-                    <label for="amount">Amount ($)</label>
-                    <input type="number" id="amount" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
-                </div>
-                <button type="submit" class="btn-primary">Proceed to Payment</button>
-            </form>
-        </div>
-    </div>
+    <!-- Simple JavaScript for custom amount -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const customAmount = document.getElementById('customAmount');
+        const customDonate = document.getElementById('customDonate');
+        
+        if (customAmount && customDonate) {
+            customDonate.addEventListener('click', function(e) {
+                if (customAmount.value) {
+                    // Store the custom amount in localStorage to pre-fill on get-involved page
+                    localStorage.setItem('preselectedAmount', customAmount.value);
+                }
+            });
+        }
+        
+        // For the fixed amount cards, we can also store the amount
+        document.querySelectorAll('.donation-card:not(.custom-amount) .donate-btn').forEach((btn, index) => {
+            btn.addEventListener('click', function(e) {
+                const card = this.closest('.donation-card');
+                const amount = card.querySelector('h3').textContent.replace('₦', '').replace(',', '');
+                localStorage.setItem('preselectedAmount', amount);
+            });
+        });
+    });
+    </script>
 
     <script src="navigation.js"></script>
-    <script src="donation.js"></script>
 </body>
 </html>
