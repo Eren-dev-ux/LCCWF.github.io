@@ -74,24 +74,24 @@ function initImpactPage() {
     // Story data (in production, this would come from a database)
     const stories = {
         1: {
-            title: "Sarah's Journey to Safety",
+            title: "Child Protection",
             category: "Child Protection",
             image: "images/impact/story-1.jpg",
-            location: "Central Region",
-            year: "2023",
+            location: "Abuja, FCT",
+            year: "February 7, 2026",
             fullStory: `
                 <div class="modal-story">
                     <div class="story-header">
-                        <h2>Sarah's Journey to Safety</h2>
+                        <h2>Child Protection</h2>
                         <div class="story-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Central Region</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Abuja, FCT</span>
                             <span><i class="fas fa-calendar"></i> 2023</span>
                             <span class="story-category-tag">Child Protection</span>
                         </div>
                     </div>
                     
                     <div class="story-image-full">
-                        <img src="images/impact/story-1.jpg" alt="Sarah's Story">
+                        <img src="images/impact/story-1.jpg" alt="Child Protection">
                     </div>
                     
                     <div class="story-content-full">
