@@ -91,7 +91,8 @@ function initImpactPage() {
                     </div>
                     
                     <div class="story-image-full">
-                        <img src="https://image2url.com/r2/default/images/1774170970053-98990bfc-c8cc-4df9-9737-51f8be819aaf.jpg" alt="Child Protection">
+
+    <img src="https://image2url.com/r2/default/images/1774170970053-98990bfc-c8cc-4df9-9737-51f8be819aaf.jpg" width="200" height="auto" alt="Child Protection">
                     </div>
                     
                     <div class="story-content-full">
