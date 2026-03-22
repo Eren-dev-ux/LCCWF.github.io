@@ -76,7 +76,7 @@ function initImpactPage() {
         1: {
             title: "Child Protection",
             category: "Child Protection",
-            image: "images/impact/story-1.jpg",
+            image: "https://image2url.com/r2/default/images/1774170970053-98990bfc-c8cc-4df9-9737-51f8be819aaf.jpg",
             location: "Abuja, FCT",
             year: "February 7, 2026",
             fullStory: `
