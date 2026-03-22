@@ -95,27 +95,24 @@ function initImpactPage() {
                     </div>
                     
                     <div class="story-content-full">
-                        <p>After losing both parents in a tragic accident, 10-year-old Sarah was left in the care of elderly grandparents who struggled to make ends meet. She was at risk of dropping out of school and facing exploitation in her community.</p>
+                        <p>Children in Abuja's Karonmajigi Community Are Sensitized to Substance Abuse
+Abuja, FCT – February 7, 2026
+
+On February 7, 2026, children in Karonmajigi Community, Federal Capital Territory, Abuja, were made aware of the risks associated with substance use. In partnership with ISSUP FCT Abuja, the Lighthouse Children and Community Wellness Foundation organized the awareness campaign.</p>
                         
-                        <p>Through our child protection program, Sarah received comprehensive support:</p>
+                        <p>The main goals of the session were to inform kids about the dangers of substance use and to give them the information and self-assurance they need to make responsible and healthy choices.</p>
                         
                         <ul>
                             <li><strong>Educational Support:</strong> School fees, uniforms, and learning materials provided</li>
                             <li><strong>Psychosocial Care:</strong> Regular counseling sessions to help process grief</li>
-                            <li><strong>Nutrition Support:</strong> Daily school meals to ensure proper nutrition</li>
-                            <li><strong>Safe Environment:</strong> Placement in our after-school care program</li>
+                            <li>Through engaging conversations, the facilitators helped participants comprehend the negative consequences of drugs and the significance of defying peer pressure.</li>
                         </ul>
                         
-                        <p>Today, Sarah is thriving in school with above-average grades. She participates in our life skills program and has become a peer mentor for other vulnerable children in her community.</p>
-                        
-                        <blockquote>
-                            "I want to be a teacher when I grow up, so I can help other children who have lost their parents like me."
-                            <cite>- Sarah, Age 10</cite>
-                        </blockquote>
+                        <p>The program is a component of the collaborating organizations' continuous efforts to support healthier communities, early prevention, and child welfare in the Federal Capital Territory.</p>
                         
                         <div class="story-outcome">
                             <h3><i class="fas fa-check-circle"></i> Outcome</h3>
-                            <p>Sarah has maintained perfect school attendance for 18 months and is now ranked 3rd in her class of 45 students.</p>
+                            <p>Increased Awareness: Children gained immediate knowledge about the specific physical, mental, and social dangers of substance use, replacing misconceptions with facts.</p>
                         </div>
                     </div>
                 </div>
